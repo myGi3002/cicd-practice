@@ -34,7 +34,8 @@ export const calculatePoints = (
 
     // 1. オカの計算
     //    持ち点より返し点が高い場合、その差分が1位のボーナスになる
-    const oka = (settings.return_pts - settings.start_pts) * 4 / 10;
+    // const oka = (settings.return_pts - settings.start_pts) * 4 / 10;
+    const oka =0;
 
     // 2. ウマ（順位ボーナス）の決定
     let rankingBonuses: number[];
@@ -54,8 +55,8 @@ export const calculatePoints = (
         const uma = UMA_MAP[settings.uma_type] ?? UMA_MAP['10-30'];
 
         // 通常ウマは1位にオカを加算
-        //rankingBonuses = [uma[0] + oka, uma[1], uma[2], uma[3]];
-        rankingBonuses = [uma[0] , uma[1], uma[2], uma[3]];
+        rankingBonuses = [uma[0] + oka, uma[1], uma[2], uma[3]];
+        
     }
 
     // 3. 素点を持ち点基準の増減に変換
