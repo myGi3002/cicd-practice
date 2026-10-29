@@ -54,7 +54,8 @@ export const calculatePoints = (
         const uma = UMA_MAP[settings.uma_type] ?? UMA_MAP['10-30'];
 
         // 通常ウマは1位にオカを加算
-        rankingBonuses = [uma[0] + oka, uma[1], uma[2], uma[3]];
+        //rankingBonuses = [uma[0] + oka, uma[1], uma[2], uma[3]];
+        rankingBonuses = [uma[0] , uma[1], uma[2], uma[3]];
     }
 
     // 3. 素点を持ち点基準の増減に変換
