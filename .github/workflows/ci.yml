@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Node.js 24 を用意
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: 24
           cache: npm
